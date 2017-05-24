@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        div[id]
+        {
+            color: red;
+        }
+
+        div[class="myclass mysuperclass"]  /* selects class with exact class value */
+        {
+            text-decoration: underline;
+        }
+
+        div[id][class="myclass"]
+        {
+            border: 2px dotted #000;
+        }
+
+        div[id][class~="myclass"] /* selects class in which word myclass must exists no metter where */
+        {
+            background: yellow;
+        }
+
+        /*
+
+         E[foo^="bar"] - bar in start
+         E[foo$="bar"] - bar at the end
+
+         E[foo*="bar"] - contains bar
+
+        */
+
+        div[title*="есг"]
+        {
+            font-style: italic;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="myid">текст1</div>
+    <div class="myclass">текст2</div>
+    <div id="myid2" class="myclass">текст3</div>
+    <div id="myid3" class="myclass mysuperclass">текст4</div>
+    <div id="myid4" class="myclass mysuperclass">текст5</div>
+</body>
+</html>
