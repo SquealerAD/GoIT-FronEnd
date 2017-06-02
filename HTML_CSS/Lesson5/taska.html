@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        body,ul,li,a
+        {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style-type: none;
+            font-family: Impact, Arial,sans-serif;
+            font-size: 16px;
+        }
+
+        #topMenu
+        {
+            background: rgba(26,164,255,1.0);
+            width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .topNav
+        {
+            margin-left: 7%;
+        }
+        .topNav a
+        {
+            color: rgba(255,255,255,1.0);
+            display: block;
+            padding: 7px;
+        }
+
+        .topNav li
+        {
+            float: left;
+        }
+
+        .topNav a:hover
+        {
+            background: rgba(238,238,238,1.0);
+            color: rgba(160,160,160,1.0);
+        }
+
+        .topNav li:nth-child(7):hover .subMenuTravels,
+        .topNav li:nth-child(5):hover .subMenuSports,
+        .topNav li:nth-child(2):hover .subMenuNews
+        {
+            opacity: 1;
+            visibility: visible;
+            transition: visibility 0s ease, opacity 1s linear;
+        }
+
+        /* all submenus styles */
+
+        .subMenuTravels,
+        .subMenuSports,
+        .subMenuNews
+        {
+            position: absolute;
+            width: 900px;
+            margin: 0;
+            left: 0;
+            background: rgba(230,230,230,1.0);
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s ease, opacity 1s linear;
+        }
+        .subMenuTravels li:first-of-type,
+        .subMenuSports li:first-of-type,
+        .subMenuNews li:first-of-type
+        {
+            margin-left: 7%;
+        }
+        .subMenuTravels li,
+        .subMenuSports li,
+        .subMenuNews li
+        {
+            clear: right;
+        }
+        .subMenuTravels a,
+        .subMenuSports a,
+        .subMenuNews a
+        {
+            color: rgba(160,160,160,1.0);
+        }
+
+        .clear:after,.clear:before
+        {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+
+        /* Testing */
+
+        #topMenu .test
+        {
+            position: absolute;
+            background: rgba(238,238,238,1.0);
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s ease, opacity 1s linear;
+        }
+
+        #topMenu .test li
+        {
+            float: none;
+        }
+
+        #topMenu .test a:hover
+        {
+            background: rgba(230,230,230,1.0);
+        }
+
+        #topMenu .test a
+        {
+            color: rgba(160,160,160,1.0);
+        }
+
+        #topMenu .topNav li:nth-child(1):hover .test
+        {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav id="topMenu" class="clear">
+
+        <ul class="topNav">
+            <li><a href="#">HOME</a>
+                <ul class="test">
+                    <li><a href="#">Test 111111</a></li>
+                    <li><a href="#">Test 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">NEWS</a>
+                <ul class="subMenuNews">
+                    <li><a href="#">News 1</a></li>
+                    <li><a href="#">News 2</a></li>
+                    <li><a href="#">News 3</a></li>
+                    <li><a href="#">News 4</a></li>
+                    <li><a href="#">News 5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ECONOMICS</a></li>
+            <li><a href="#">LOCAL</a></li>
+            <li><a href="#">SPORTS</a>
+                <ul class="subMenuSports">
+                    <li><a href="#">Ice Hockey</a></li>
+                    <li><a href="#">Rugby</a></li>
+                    <li><a href="#">Football</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CULTURE</a></li>
+            <li><a href="#">TRAVELS</a>
+                <ul class="subMenuTravels">
+                    <li><a href="#">Amsterdam</a></li>
+                    <li><a href="#">Bahamas</a></li>
+                    <li><a href="#">Jamaica</a></li>
+                    <li><a href="#">Las Vegas</a></li>
+                    <li><a href="#">London</a></li>
+                    <li><a href="#">Las Angeles</a></li>
+                    <li><a href="#">Miami</a></li>
+                    <li><a href="#">Montreal</a></li>
+                    <li><a href="#">Paris</a></li>
+                    <li><a href="#">Rome</a></li>
+                </ul>
+            </li>
+            <li><a href="#">LVIVNG</a></li>
+            <li><a href="#">MONEY</a></li>
+            <li><a href="#">TECHNOLOGY</a></li>
+            <li><a href="#">MORE</a></li>
+        </ul>
+
+    </nav>
+
+</body>
+</html>

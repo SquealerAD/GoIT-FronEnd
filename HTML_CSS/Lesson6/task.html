@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        h1,h2,ol,li,ul,input
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        .outerWrapperAdv
+        {
+            text-align: center;
+            min-width: 60%;
+            white-space: nowrap;
+            font-family: "Algerian";
+        }
+        h1
+        {
+            text-align: center;
+        }
+        li
+        {
+            list-style-type: none;
+        }
+
+        .bestValues,.standard,.ultimate
+        {
+            display: inline-block;
+        }
+        .bestValues > h2
+        {
+            background: rgba(236,129,54,1.0);
+            line-height: 3em;
+            color: white;
+        }
+
+        .standard > h2
+        {
+            background: rgba(55,194,211,1.0);
+            line-height: 2.5em;
+            color: white;
+            border: 1px solid rgba(55,194,211,1.0);
+            border-radius: 7px 7px 0 0;
+        }
+
+        .ultimate > h2
+        {
+            background: rgba(28,183,154,1.0);
+            line-height: 2.5em;
+            color: white;
+            border: 1px solid rgba(28,183,154,1.0);
+            border-radius: 7px 7px 0 0;
+        }
+
+        .ultimate, .standard
+        {
+        /*rgba(232,234,236,1.0);*/
+            border: 1px solid rgba(232,234,236,1.0);;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .ultimate
+        {
+            top: -10px;
+            right: 9px;
+            z-index: -1;
+        }
+
+        .standard
+        {
+            top: -10px;
+            left: 9px;
+            z-index: -1;
+        }
+
+        .bestValues
+        {
+            border: 2px solid rgba(236,129,54,1.0);
+            border-radius: 7px;
+        }
+
+        .innerWrapperAdv h2
+        {
+            margin: 35px;
+        }
+
+        .innerWrapperAdv ul
+        {
+            margin-top: 30px;
+        }
+
+        .bestValues .innerWrapperAdv input
+        {
+            margin-top: 30px;
+            margin-bottom: 25px;
+            width: 80%;
+            font-weight: bold;
+            color: white;
+            background: rgba(236,129,54,1.0);
+            padding: 10px 20px 10px 20px;
+        }
+
+        .standard .innerWrapperAdv input,
+        .ultimate .innerWrapperAdv input
+        {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 80%;
+            padding: 10px 20px 10px 20px;
+            color: white;
+            background: rgba(51,113,166,1.0);
+        }
+
+        span:first-of-type
+        {
+            vertical-align: 150%;
+            font-weight: bold;
+        }
+        span:nth-of-type(2)
+        {
+            font-weight: bold;
+            font-size: 46px;
+        }
+        span:last-of-type
+        {
+            vertical-align: sub;
+            font-weight: bold;
+        }
+
+        ul
+        {
+            -border: 1px solid;
+            width: 80%;
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .outerWrapperAdv ul li
+        {
+            text-align: left;
+            font-size: 16px;
+            list-style-position: outside;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            color: grey;
+        }
+
+        .outerWrapperAdv ul li:before
+        {
+            content: "";
+            background-image: url("-.jpg");
+            background-size: 14px 14px;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 3px;
+        }
+
+        .outerWrapperAdv ul li:nth-of-type(odd)
+        {
+            background: rgba(238,245,252,1.0);
+        }
+
+        .outerWrapperAdv ul li:nth-of-type(even)
+        {
+            background: rgba(245,245,246,1.0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>WE HAVE A VERY FLEXIBLE OFFERS FOR YOU TO CHOOSE </h1>
+
+    <div class="outerWrapperAdv">
+
+
+        <div class="standard">
+
+            <h2>STANDARD</h2>
+
+            <div class="innerWrapperAdv">
+
+                <h2>ICONIC GRAPHICS</h2>
+                <span>$</span><span>10</span><span>Monthly</span>
+
+                <ul class="list">
+                    <li>Unmetered Traffic</li>
+                    <li>Unlimited Domain</li>
+                    <li>Unlimited Databases</li>
+                    <li>Unlimited e-Mails</li>
+                </ul>
+
+                <input type="button" value="ENROLL TODAY"/>
+
+            </div>
+
+        </div>
+        <div class="bestValues">
+
+            <h2>BEST VALUE</h2>
+
+            <div class="innerWrapperAdv">
+
+                <h2>ICONIC GRAPHICS</h2>
+                <span>$</span><span>25</span><span>Monthly</span>
+
+                <ul class="list">
+                    <li>PHP, PERL, ASP, JSP</li>
+                    <li>SEMI DEDICATED</li>
+                    <li>Staging or Production</li>
+                    <li>Unlimited e-Mails</li>
+                </ul>
+
+                <input type="button" value="ENROLL TODAY"/>
+
+            </div>
+
+        </div>
+
+        <div class="ultimate">
+
+            <h2>ULTIMATE</h2>
+
+            <div class="innerWrapperAdv">
+
+                <h2>ICONIC GRAPHICS</h2>
+                <span>$</span><span>35</span><span>Monthly</span>
+
+                <ul class="list">
+                    <li>Semi Dedicated</li>
+                    <li>1TB Storage</li>
+                    <li>Faster Site, Better SEO</li>
+                    <li>Unlimited e-Mails</li>
+                </ul>
+
+                <input type="button" value="ENROLL TODAY"/>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

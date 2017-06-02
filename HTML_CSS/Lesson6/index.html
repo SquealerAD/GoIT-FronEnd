@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        ul li
+        {
+            color: red;
+        }
+        ul li span
+        {
+            color: black;
+        }
+
+        body
+        {
+            counter-reset: boxes sections checkboxescnt;
+        }
+
+        section
+        {
+            counter-increment: sections;
+            counter-reset: boxes;
+        }
+
+        a
+        {
+            counter-increment: boxes;
+            border: 1px solid;
+        }
+
+        a:before
+        {
+            content: counter(boxes);
+        }
+
+        .totalcount input
+        {
+            position: absolute;
+            left: -9000em;
+        }
+        .totalcount label
+        {
+            float: left;
+        }
+        .totalcount input:checked + label
+        {
+            counter-increment: checkboxescnt;
+            outline: 10px red;
+        }
+
+        .totalcount span:after
+        {
+            content: " Total checked "  counter(checkboxescnt);
+        }
+
+        .game input
+        {
+            position: absolute;
+            left: -9000em;
+        }
+
+        .game input[id="one"]:checked
+        {
+            counter-increment: gamecnt 64;
+            outline: red;
+        }
+        .game span:after
+        {
+            content: counter(gamecnt);
+            min
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><span>a</span></li>
+    <li><span>b</span></li>
+    <li><span>c</span></li>
+</ul>
+
+
+
+    <section>
+
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+
+
+    </section>
+
+    <section>
+
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+
+    </section>
+<br><br><br><br><br>
+
+    <div class="totalcount">
+
+        <input type="checkbox" id="a" /><label for="a">aaa</label>
+        <input type="checkbox" id="b" /><label for="b">bbb</label>
+        <input type="checkbox" id="c" /><label for="c">ccc</label>
+        <input type="checkbox" id="e" /><label for="e">eee</label>
+        <input type="checkbox" id="f" /><label for="f">fff</label>
+        <input type="checkbox" id="g" /><label for="g">ggg</label>
+        <input type="checkbox" id="h" /><label for="h">hhh</label>
+        <input type="checkbox" id="l" /> <label for="l">lll</label>
+
+        <span>
+
+    </span>
+
+    </div>
+
+
+    <div class="game">
+
+        <input type="checkbox" id="one" /><label for="one">64</label>
+        <input type="checkbox" id="two" /><label for="two">16</label>
+        <input type="checkbox" id="three" /><label for="three">-32</label>
+        <input type="checkbox" id="four" /><label for="four">128</label>
+        <input type="checkbox" id="five" /><label for="five">4</label>
+        <input type="checkbox" id="six" /><label for="six">-8</label>
+
+        <span> total: </span>
+
+    </div>
+
+
+
+
+</body>
+</html>

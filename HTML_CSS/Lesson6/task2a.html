@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        @media screen and (min-width: 680px) {
+
+            .clientResponseOuter
+            {
+                width: 80%;
+                min-width: 1000px;
+                height: 315px;
+                background: black;
+                margin: 0 auto;
+            }
+
+            .clientResponseOuter h1
+            {
+                color: rgb(49,112,168);
+                text-align: center;
+            }
+
+            .clientResponseOuter h1 span
+            {
+                color: rgb(238,129,41);
+            }
+
+            .person
+            {
+                -width: 40%;
+                height: 98px;
+                -border: 1px solid red;
+                white-space: nowrap;
+                min-width: 25%;
+                max-width: 35%;
+                margin-left: 10%;
+                display: inline-block;
+                margin-top: 40px;
+            }
+
+            .person img
+            {
+                display: inline-block;
+                float: left;
+            }
+
+            .person .saying
+            {
+                background: white;
+                display: inline-block;
+                padding: 5px;
+                width: 60%;
+                height: 98px;
+                float: left;
+                box-sizing: border-box;
+                white-space: normal;
+                overflow: auto;
+            }
+
+            .person .arrow
+            {
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent white transparent transparent;
+                float: left;
+                margin-top: 40px;
+            }
+
+            .customerName em:first-of-type, .customerName em:nth-of-type(2)
+            {
+                float: left;
+                color: rgb(49,112,168);
+            }
+
+            .customerName em:last-of-type
+            {
+                float: right;
+                color: rgb(49,112,168);
+            }
+
+            .customerName
+            {
+                border-style: dotted;
+                border-color: transparent transparent grey transparent;
+                border-width: 2px;
+
+            }
+
+            .clear:before, .clear:after
+            {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        }
+
+        @media screen and (max-width:679px) {
+            .clientResponseOuter
+            {
+                width: 80%;
+                min-width: 400px;
+                height: 515px;
+                background: black;
+                margin: 0 auto;
+            }
+
+            .clientResponseOuter h1
+            {
+                color: rgb(49,112,168);
+                text-align: center;
+            }
+
+            .clientResponseOuter h1 span
+            {
+                color: rgb(238,129,41);
+            }
+
+            .person
+            {
+                width: 70%;
+                height: 98px;
+                border: 1px solid red;
+                white-space: nowrap;
+                min-width: 90%;
+                margin-left: 10%;
+                float: left;
+                clear: both;
+                margin-top: 40px;
+            }
+
+            .person img
+            {
+                display: inline-block;
+                float: left;
+            }
+
+            .person .saying
+            {
+                background: white;
+                display: inline-block;
+                padding: 5px;
+                width: 60%;
+                height: 98px;
+                float: left;
+                box-sizing: border-box;
+                white-space: normal;
+                overflow: auto;
+            }
+
+            .person .arrow
+            {
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent white transparent transparent;
+                float: left;
+                margin-top: 40px;
+            }
+
+            .customerName em:first-of-type, .customerName em:nth-of-type(2)
+            {
+                float: left;
+                color: rgb(49,112,168);
+            }
+
+            .customerName em:last-of-type
+            {
+                float: right;
+                color: rgb(49,112,168);
+            }
+
+            .customerName
+            {
+                border-style: dotted;
+                border-color: transparent transparent grey transparent;
+                border-width: 2px;
+
+            }
+
+            .clear:before, .clear:after
+            {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="clientResponseOuter clear">
+
+        <h1><span>WHAT</span> CLIENT SAYS</h1>
+
+        <div class="person">
+
+            <img src="Person%201.png" alt="Staciya Trallio" title="Staciya Trallio" />
+
+            <div class="arrow"></div>
+
+            <div class="saying">
+
+                <div class="customerName clear">
+                    <em>-</em><em>Staciya Trallio</em><em>Customer</em>
+                </div>
+
+                <p>Lorem Ipsum is simply dummy text of printing and industry.
+                   Lorem Ipsum has been the industry.</p>
+
+            </div>
+
+        </div>
+
+        <div class="person">
+
+            <img src="Person%202.png" alt="David Soul" title="David Soul" />
+
+            <div class="arrow"></div>
+
+            <div class="saying">
+
+                <div class="customerName clear">
+                    <em>-</em><em>David Soul</em><em>Customer</em>
+                </div>
+
+                <p>Lorem Ipsum is simply dummy text of printing and industry.
+                    Lorem Ipsum has been the industry.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

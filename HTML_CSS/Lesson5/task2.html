@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body
+        {
+            font-family: Arial,David,sans-serif;
+        }
+        div,h1,h2,ul,li
+        {
+            margin:0;
+            padding: 0;
+        }
+
+        p span:nth-child(2)
+        {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        p span:first-child
+        {
+            vertical-align: top;
+        }
+        p span:last-child
+        {
+            vertical-align: bottom;
+        }
+
+        .pricing
+        {
+            display: inline-block;
+            margin: 0 auto;
+            border: 1px solid;
+            border-color: rgba(238,129,41,1.0);
+            background: rgba(238,129,41,1.0);
+            border-radius: 5px;
+        }
+        .pricing h1
+        {
+            text-align: center;
+            line-height: 1.1em;
+            color: rgba(255,255,255,1.0);
+            padding: 20px;
+        }
+
+        .inner
+        {
+            text-align: center;
+            background: white;
+        }
+
+        table
+        {
+            margin:auto;
+            margin-bottom: 10px;
+        }
+
+        input
+        {
+            clear: both;
+            margin-bottom: 10px;
+            width: 80%;
+            background: rgba(238,129,41,1.0);
+            border-radius: 5px;
+            color: white;
+            height: 30px;
+        }
+        td
+        {
+            float: left;
+        }
+        tr:nth-child(odd)
+        {
+            background: rgba(237,245,253,1.0);
+        }
+
+        tr:nth-child(even)
+        {
+            background: rgba(245,245,245,1.0);
+        }
+
+        td:before
+        {
+            background-image: url("-.jpg");
+            background-size: 14px 14px;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            content: "";
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="pricing">
+
+        <h1>BEST VALUE</h1>
+
+        <div class="inner">
+
+            <h2>ICONIC GRAPHICS</h2>
+            <p><span>$</span><span>25</span><span>Monthly</span></p>
+            <table>
+                <tr>
+                    <td> PHP,PERL,ASP,JSP</td>
+                </tr>
+                <tr>
+                    <td> SEMI DEDICATED</td>
+                </tr>
+                <tr>
+                    <td> Staging or Production</td>
+                </tr>
+                <tr>
+                    <td> Unlimited e-Mails</td>
+                </tr>
+            </table>
+
+            <input type="button" value="ENROLL TODAY"/>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>

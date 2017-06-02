@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        body
+        {
+            font-family: "Economica",Arial,sans-serif;
+        }
+
+        ul,li,ol
+        {
+            margin: 0;
+            padding: 0;
+        }
+        #topNav ul
+        {
+            margin: 0 auto;
+            /*border: 1px solid;*/
+            font-size: 20px;
+            width: 900px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        #topNav
+        {
+            background: rgb(166,77,255);
+        }
+
+        #topNav a
+        {
+            text-decoration: none;
+            color: rgb(255,255,255);
+            padding: 10px;
+        }
+
+        #topNav ul > li
+        {
+            list-style-type: none;
+            display: block;
+            float: left;
+            padding-right: 20px;
+        }
+
+        #topNav ul > li:nth-child(2)
+        {
+            margin-left: 40px;
+        }
+
+        #topNav ul > li:first-of-type
+        {
+            float: right;
+            margin-right: 50px;
+        }
+
+        .clear:after
+        {
+            content: " ";
+            display: inline-block;
+        }
+
+        #topNav ul > li a:hover
+        {
+            background: rgb(238,248,238);
+            color: rgb(162,161,159);
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <nav id="topNav">
+
+        <ul class="clear">
+            <li><a href="#">MORE</a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">ECONOMICS</a></li>
+            <li><a href="#">LOCAL</a></li>
+            <li><a href="#">SPORT</a></li>
+            <li><a href="#">CULTURE</a></li>
+            <li><a href="#">TRAVELS</a></li>
+        </ul>
+
+    </nav>
+
+</body>
+</html>

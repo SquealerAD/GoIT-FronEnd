@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .clientReplics
+        {
+            display: flex;
+            flex-flow: row nowrap;
+            background: black;
+            height: 315px;
+            position: relative;
+            min-width: 720px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .clientReplics h1
+        {
+            color: rgba(49,112,168,1.0);
+            position: absolute;
+            left: 40%;
+        }
+
+        .clientReplics span
+        {
+            color: rgba(238,129,41,1.0);
+        }
+        .person
+        {
+            display: flex;
+            -border: 1px solid red;
+            flex-flow: row nowrap;
+            flex: 1 1 auto;
+            height: 100px;
+            align-self: center;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .person .arrow
+        {
+            border-width: 15px;
+            border-color: transparent white transparent transparent;
+            border-style: solid;
+            margin-top: 40px;
+            width: 0;
+            height: 0;
+
+        }
+
+        .person .saying
+        {
+            flex: 1 1 auto;
+            height: 100px;
+            overflow: auto;
+            background: white;
+            min-width: 200px;
+        }
+        .person img
+        {
+            flex: none;
+            height: 100px;
+        }
+
+        .customer
+        {
+            -margin-bottom: 10px;
+            border-style: dotted;
+            border-width: 2px;
+            border-color:  transparent transparent grey transparent;
+            padding-bottom: 10px;
+        }
+
+        .customer em:first-of-type
+        {
+            -float: left;
+        }
+        .customer em:last-of-type
+        {
+            float: right;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+            <div class="clientReplics">
+
+                <h1><span>WHAT </span>CLIENT SAYS</h1>
+
+                <div class="person">
+
+                    <img src="Person%201.png"  alt="Customer" title="Staciya Trollio" />
+                    <div class="arrow"></div>
+                    <section class="saying">
+
+                        <div class="customer ">
+                            <em>- Staciya Trollio</em><em>Customer</em>
+                        </div>
+                        <p>Lorem ipsum is simply dummy text of the   printing and industry. Lorem ipsum has been the industry</p>
+
+                    </section>
+
+                </div>
+
+                <div class="person">
+
+                    <img src="Person%202.png" alt="Customer" title="Joe Trollio" />
+                    <div class="arrow"></div>
+                    <section class="saying">
+
+                        <div class="customer clear">
+                        <em>- David Soul</em><em>Customer</em>
+                        </div>
+                        <p>Lorem ipsum is simply dummy text of the   printing and industry. Lorem ipsum has been the industry</p>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+</body>
+</html>

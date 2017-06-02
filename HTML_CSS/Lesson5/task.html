@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        ul,li,ol
+        {
+            margin: 0;
+            padding: 0;
+        }
+        /* main nav styles */
+        #mainNav
+        {
+            background: rgba(26,164,255,1.0);
+            font-family: Impact,Arial,sans-serif;
+            font-size: 14px;
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        /* main nav top menu styles*/
+
+
+        .topMenu, .travelsSubMenu, .sportsSubMenu
+        {
+            list-style-type: none;
+            position: relative;
+        }
+
+        .topMenu li, .travelsSubMenu li, .sportsSubMenu li
+        {
+            float: left;
+            /*border: 1px solid;*/
+        }
+
+        .topMenu li:first-of-type, .travelsSubMenu li:first-of-type,
+        sportsSubMenu li:first-of-type
+        {
+            margin-left: 12%;
+        }
+        .topMenu a, .travelsSubMenu a, .sportsSubMenu a
+        {
+            text-decoration: none;
+            color: rgba(255,255,255,1.0);
+            font-weight: 100;
+            display: block;
+            padding: 10px;
+        }
+
+        .topMenu a:hover, .travelsSubMenu a:hover, sportsSubMenu a:hover
+        {
+            background: rgba(238,238,238,1.0);
+            color: rgba(161,161,161,1.0);
+        }
+
+        /* travels submenu*/
+
+        .travelsSubMenu, .sportsSubMenu
+        {
+            background: rgba(238,238,238,1.0);
+            position: absolute;
+            width: 900px;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s ease, opacity 1s linear;
+
+        }
+
+        #mainNav .travelsSubMenu a:hover, #mainNav .sportsSubMenu a:hover
+        {
+            background: rgba(255,255,255,1.0);
+        }
+
+        #mainNav .travelsSubMenu a, #mainNav .sportsSubMenu a
+        {
+            color: rgba(120,120,120,1.0);
+        }
+
+        /* submenu show */
+
+        #mainNav .topMenu > li:nth-child(7):hover .travelsSubMenu,
+        #mainNav .topMenu > li:nth-child(5):hover .sportsSubMenu,
+        #mainNav .topMenu > li:nth-child(7):hover .travelsSubMenu,
+        #mainNav .topMenu > li:nth-child(7):hover .travelsSubMenu,
+        #mainNav .topMenu > li:nth-child(7):hover .travelsSubMenu
+        {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s ease, opacity 1s linear;
+
+        }
+
+        /* clearfix */
+
+        .clear:after,.clear:before
+        {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav id="mainNav">
+        <ul class="topMenu clear">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">ECONOMICS</a></li>
+            <li><a href="#">LOCAL</a></li>
+            <li><a href="#">SPORT</a>
+                <ul class="sportsSubMenu">
+                    <li><a href="#">Ice Hockey</a></li>
+                    <li><a href="#">Soccer</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CULTURE</a></li>
+            <li><a href="#">TRAVELS</a>
+                <ul class="travelsSubMenu">
+                    <li><a href="#">Amsterdam</a></li>
+                    <li><a href="#">Bahamas</a></li>
+                    <li><a href="#">Jamaica</a></li>
+                    <li><a href="#">Las Vegas</a></li>
+                    <li><a href="#">London</a></li>
+                    <li><a href="#">Los Angeles</a></li>
+                    <li><a href="#">Miami</a></li>
+                    <li><a href="#">Montreal</a></li>
+                    <li><a href="#">Paris</a></li>
+                    <li><a href="#">Rome</a></li>
+                </ul>
+            </li>
+            <li><a href="#">LIVING</a></li>
+            <li><a href="#">MONEY</a></li>
+            <li><a href="#">TECHNOLOGY</a></li>
+            <li><a href="#">MORE</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

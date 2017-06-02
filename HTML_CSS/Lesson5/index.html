@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+
+        .one,.two
+        {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            border: 1px solid;
+        }
+
+        .one
+        {
+            position: absolute;
+            top: 50px;
+            z-index: 0;
+        }
+        .two
+        {
+            position: absolute;
+            z-index: 100;
+        }
+
+        p
+        {
+            background: red;
+            line-height: 6.2;
+        }
+
+        ul li
+        {
+            list-style-type: none;
+        }
+
+        ul li:before
+        {
+            display: inline-block;
+            content: url("-.jpg");
+        }
+    </style>
+
+</head>
+<body>
+
+<table border="1" style="border-collapse: collapse">
+    <colgroup>
+        <col />
+    </colgroup>
+    <tbody>
+    <tr>
+        <td>asad</td>
+        <td>sdfsdsdf</td>
+    </tr>
+    </tbody>
+</table>
+
+    <p>sasfdasf</p>
+
+<ul>
+    <li>11</li>
+    <li>1</li>
+</ul>
+</body>
+</html>

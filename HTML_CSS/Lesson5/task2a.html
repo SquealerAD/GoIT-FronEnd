@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+         h1,h2,ol,ul,li
+         {
+             padding: 0;
+             margin: 0;
+             list-style-type: none;
+         }
+        .adv
+        {
+            display: inline-block;
+            border: rgba(238,129,41,1.0) solid;
+            border-radius: 7px;
+            position: absolute;
+            left: 50%;
+        }
+        .adv > h2
+        {
+            background: rgba(238,129,41,1.0);
+            line-height: 3em;
+            text-align: center;
+            color: white;
+        }
+
+        .adv .inner
+        {
+            text-align: center;
+            padding: 20px;
+        }
+
+         .adv .inner h2
+         {
+             margin-bottom: 20px;
+         }
+
+         .adv .inner .list
+         {
+             margin-top: 30px;
+             margin-left: 1%;
+         }
+
+         .adv .inner .list li
+         {
+             text-align: left;
+             padding: 5px 5px 5px 12%;
+             position: relative;
+         }
+
+         .adv .inner .list li:nth-of-type(odd)
+         {
+             background: rgba(237,245,253,1.0);
+         }
+
+         .adv .inner .list li:nth-of-type(even)
+         {
+             background: rgba(245,245,246,1.0);
+         }
+
+         /*.adv .inner .list li span*/
+         /*{*/
+             /*display: inline-block;*/
+             /*background-image: url("-.jpg");*/
+             /*background-size: 14px 14px;*/
+             /*width: 14px;*/
+             /*height: 14px;*/
+         /*}*/
+
+         .adv .inner .list li:before
+         {
+             position: absolute;
+             width: 14px;
+             height: 14px;
+             background: url("-.jpg") 0 0 no-repeat;
+             background-size: 14px 14px;
+             content: " ";
+             left:5px;
+         }
+
+        .adv .inner input
+        {
+            margin-top: 50px;
+            background: rgba(238,129,41,1.0);
+            padding: 5px 20px 5px 20px;
+            width: 90%;
+            color: white;
+            border-radius: 7px;
+        }
+
+         .adv .inner span:first-of-type
+         {
+             vertical-align: 160%;
+         }
+         .adv .inner span:last-of-type
+         {
+             vertical-align: sub;
+         }
+         .adv .inner span:nth-of-type(2)
+         {
+             font-size: 52px;
+             font-weight: bold;
+         }
+
+    </style>
+</head>
+<body>
+
+    <div class="adv">
+
+        <h2>BEST VALUE</h2>
+        <div class="inner">
+
+            <h2>ICONIC GRAPHICS</h2>
+            <span>$</span><span>25</span><span>Monthly</span>
+
+            <ul class="list">
+                <li><span></span> PHP, PERL, ASP, JSP</li>
+                <li><span></span> SEMI DEDICATED</li>
+                <li><span></span> Staging or Production</li>
+                <li><span></span> Unlimited e-Mails</li>
+            </ul>
+
+            <input type="button" class="enroll" value="ENROLL TODAY"/>
+
+        </div>
+
+    </div>
+    <br>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /* latin-ext */
+        @font-face {
+            font-family: 'Barrio';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Barrio Regular'), local('Barrio-Regular'), url(https://fonts.gstatic.com/s/barrio/v1/ls-_SA5kU_96PIKsj4eeYPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Barrio';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Barrio Regular'), local('Barrio-Regular'), url(https://fonts.gstatic.com/s/barrio/v1/qC9DkIiXyrH5oRNKaVpE0g.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+        }
+
+        .parent
+        {
+            display: table;
+            white-space: nowrap;
+            min-width: 23%;
+        }
+
+        .float
+        {
+            width: 100px;
+            height: 100px;
+            background: rgba(255,0,0,.04);
+            float: left;
+            display: inline-block;
+            font-family: "Barrio";
+        }
+
+        .w
+        {
+            text-align: right;
+        }
+
+        .w p
+        {
+            border: 1px solid red;
+            text-align: right;
+            display: inline-block;
+            width: 300px;
+
+        }
+        .test
+        {
+            -webkit-column-count:5;
+            -moz-column-count:5;
+            column-count:5;
+            -webkit-column-width:50px;
+            -moz-column-width:50px;
+            column-width:50px;
+            -webkit-column-gap: 15px;
+            -moz-column-gap: 15px;
+            column-gap: 15px;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="parent">
+
+        <div class="float">1asdad</div>
+        <div class="float">2</div>
+        <div class="float">3</div>
+        <div class="float">4</div>
+    </div>
+
+    <div class="w">
+
+        <p>asdadfasfasfas</p>
+
+    </div>
+
+
+    <p class="test"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dicta, ea eaque, error est exercitationem harum illo inventore magni minima nobis, nulla obcaecati perspiciatis quasi reprehenderit saepe totam voluptate voluptates!</span><span>Iusto maxime provident quos. Debitis dolorum expedita fugit, illo magni odit quas ullam velit. Blanditiis ea exercitationem fugit id itaque nemo, nobis reiciendis rem sequi sunt temporibus ut velit, vero!</span><span>Amet architecto magnam minima quae quisquam reiciendis! Culpa debitis, distinctio eaque eos eveniet in laborum libero minus modi nesciunt quidem quis quisquam quo recusandae rem soluta voluptates? Adipisci, eum nemo.</span><span>Accusantium ad adipisci amet animi aperiam dolor, dolorem ea eum expedita fugiat id illum incidunt, inventore iste iusto numquam obcaecati porro praesentium provident quasi, qui quis ratione sequi veritatis vitae.</span><span>Adipisci, animi architecto autem dolor dolorem doloremque dolores earum eius eligendi error est eum expedita in laboriosam maiores maxime mollitia natus nemo nihil quae quidem quos tempora tempore ut velit.</span></p>
+
+
+</body>
+</html>
