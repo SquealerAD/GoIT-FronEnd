@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Bubbler+One');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        ul,li,ol,header,body,h1,h2,h3,h4,h5,h6,input
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        li
+        {
+            list-style: none;
+        }
+        a
+        {
+            text-decoration: none;
+        }
+
+
+        .wrapper
+        {
+            /*width: 1400px;*/
+            /*height: 3309px;*/
+        }
+        header
+        {
+            width: 1400px;
+            height: 117px;
+            background: white;
+            display: block;
+           - border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        /* company name styles header */
+
+        .companyName
+        {
+            font-family: "Bubbler One",sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            -border: 1px solid red;
+            float: left;
+            margin-left: 184px;
+            height: 117px;
+            width: 285.68px;
+            white-space: nowrap;
+        }
+
+        .companyName p
+        {
+            color: rgba(48,112,168,1.0);
+            text-transform: uppercase;
+        }
+        .companyName span
+         {
+            text-transform: none;
+             color: rgba(238,129,41,1.0);
+         }
+
+
+        /* top navigation styles header*/
+
+        #topNav
+        {
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            -border: 1px solid red;
+            margin-right: 184px;
+            height: 117px;
+            float: right;
+            width: 564.04px;
+            -white-space: nowrap;
+        }
+
+        .navigation
+        {
+            height: 117px;
+            width: 564.04px;
+            position: relative;
+        }
+
+        .navigation > li
+        {
+            box-sizing: border-box;
+            -border: 1px solid red;
+            display: inline-block;
+            height: 117px;
+            -width: 90px;
+        }
+
+        .navigation  a
+        {
+            box-sizing: border-box;
+            display: inline-block;
+            -border: 1px solid red;
+            padding: 50px 20px 50px 20px;
+            color: rgba(168,168,168,1.0);
+            width: 100%;
+            -height: 100%;
+        }
+
+        .navigation > li > a:hover
+        {
+            color: rgba(48,112,168,1.0);
+            border-bottom: 2px solid rgba(48,112,168,1.0);
+            padding: 48px 20px 48px 20px;
+            box-sizing: border-box;
+        }
+
+        .navigation > li:nth-of-type(1):hover .subMenuHome,
+        .navigation > li:nth-of-type(2):hover .subMenuAbout,
+        .navigation > li:nth-of-type(3):hover .subMenuPortfolio,
+        .navigation > li:nth-of-type(4):hover .subMenuServices,
+        .navigation > li:nth-of-type(5):hover .subMenuPricing,
+        .navigation > li:nth-of-type(6):hover .subMenuContact
+        {
+            top: 100%;
+            z-index: 1;
+            transition: top 0.25s linear, z-index 0s linear 0.25s;
+        }
+
+        /* navigation submenu styles*/
+
+        .subMenuHome,
+        .subMenuAbout,
+        .subMenuPortfolio,
+        .subMenuPricing,
+        .subMenuContact,
+        .subMenuServices
+        {
+            position: absolute;
+            -border: 1px solid rgba(168,168,168,1.0);
+            margin-top: 1px;
+            top: 0;
+            transition: top 0.25s linear, z-index 0s linear 0s;
+            z-index: -1;
+        }
+
+        .subMenuHome li,
+        .subMenuAbout li,
+        .subMenuServices li,
+        .subMenuContact li,
+        .subMenuPricing li,
+        .subMenuPortfolio li
+        {
+            display: block;
+        }
+
+        .subMenuHome > li > a,
+        .subMenuAbout > li > a,
+        .subMenuPricing > li > a,
+        .subMenuPortfolio > li > a,
+        .subMenuContact > li > a,
+        .subMenuServices > li > a
+        {
+            box-sizing: border-box;
+            padding: 10px 20px 10px 20px;
+        }
+
+        .subMenuHome > li > a:hover,
+        .subMenuAbout > li > a:hover,
+        .subMenuContact > li > a:hover,
+        .subMenuServices > li > a:hover,
+        .subMenuPortfolio > li > a:hover,
+        .subMenuPricing > li > a:hover
+        {
+            color: rgba(48,112,168,1.0);
+            border-bottom: 2px solid rgba(48,112,168,1.0);
+            padding: 10px 20px 8px 20px;
+        }
+
+        /* pricing styles */
+
+         #pricing
+         {
+             border: 1px solid maroon;
+             max-width: 1400px;
+             min-height: 705px;
+             margin: 0 0 0 259px;
+             text-align: center;
+         }
+
+         #pricing h1
+         {
+             margin-top: 50px;
+             margin-bottom: 50px;
+             font-family: "Trebuchet MS",sans-serif;
+             font-size: 30px;
+         }
+
+        .ultimate,
+        .standard
+        {
+            display: inline-block;
+            width: 292px;
+            height: 440px;
+            border-radius: 7px 7px 7px 7px;
+            border: 1px solid rgba(232,234,236,1.0);
+        }
+
+        .bestValue
+        {
+             display: inline-block;
+             border: 1px solid rgba(238,129,41,1.0);
+             width: 297px;
+             height: 471px;
+             border-radius: 7px 7px 7px 7px;
+         }
+
+         .bestValueOuter h2
+         {
+             height: 82px;
+             width: 297px;
+             background: rgba(238,129,41,1.0);
+             border-radius: 7px 7px 0 0;
+             text-align: center;
+             margin-bottom: 20px;
+             display: inline-block;
+             line-height: 82px;
+             color: white;
+             font-family: "Bubbler One",sans-serif;
+             font-size: 24px;
+         }
+
+        .ultimateOuter h2,
+        .standardOuter h2
+        {
+            height: 65px;
+            width: 292px;
+            border-radius: 7px 7px 0 0;
+            text-align: center;
+            margin-bottom: 20px;
+            display: inline-block;
+            line-height: 82px;
+            color: white;
+            font-family: "Bubbler One",sans-serif;
+            font-size: 24px;
+        }
+
+        .ultimateOuter h2
+        {
+            background: rgba(0,184,154,1.0);
+        }
+
+        .standardOuter h2
+        {
+            background: rgba(43,194,213,1.0);
+        }
+
+         .bestValueInner  h2,
+         .ultimateInner h2,
+         .standardInner h2
+         {
+             font-family: "Bubbler One",sans-serif;
+             font-size: 24px;
+         }
+
+         .bestValueInner p span:first-of-type,
+         .standardInner p span:first-of-type,
+         .ultimateInner p span:first-of-type
+         {
+             vertical-align: 150%;
+             font-family: "Bubbler One",sans-serif;
+             font-size: 18px;
+             font-weight: bold;
+         }
+        .bestValueInner p span:nth-of-type(2),
+        .ultimateInner p span:nth-of-type(2),
+        .standardInner p span:nth-of-type(2)
+        {
+            font-family: "Bubbler One",sans-serif;
+            font-size: 48px;
+            font-weight: bolder;
+        }
+        .bestValueInner p span:last-of-type,
+        .standardInner p span:last-of-type,
+        .ultimateInner p span:last-of-type
+        {
+            font-family: "Bubbler One",sans-serif;
+            font-size: 18px;
+            vertical-align: sub;
+            font-weight: bold;
+        }
+
+        .bestValueInner ul,
+        .standardInner ul,
+        .ultimateInner ul
+        {
+            font-family: Calibri,sans-serif;
+            font-size: 20px;
+            -border: 1px solid red;
+            display: block;
+            text-align: left;
+
+        }
+        .bestValueInner ul li,
+        .ultimateInner ul li,
+        .standardInner ul li
+        {
+            margin: 5px 0 5px 0;
+            padding-left: 20%;
+            border: 1px solid red;
+            display: block;
+            position: relative;
+            box-sizing: content-box;
+        }
+
+        .bestValueInner ul li:nth-of-type(odd),
+        .ultimateInner ul li:nth-of-type(odd),
+        .standardInner ul li:nth-of-type(odd)
+        {
+            background: rgba(237,245,253,1.0);
+        }
+        .bestValueInner ul li:nth-of-type(even),
+        .ultimateInner ul li:nth-of-type(even),
+        .standardInner ul li:nth-of-type(even)
+        {
+            background: rgba(245,245,246,1.0);
+        }
+
+        .bestValueInner ul li:before,
+        .ultimateInner ul li:before,
+        .standardInner ul li:before
+        {
+            content: "";
+            background-size: 14px 14px;
+            background-image: url(-.jpg);
+            background-repeat: no-repeat;
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            margin-right: 3px;
+        }
+
+        .bestValueInner input,
+        .standardInner input,
+        .ultimateInner input
+        {
+            font-family: "Open Sans",sans-serif;
+            font-size: 18px;
+            padding: 12px 55px 12px 55px;
+            margin-top: 30px;
+            color: white;
+        }
+
+        .bestValueInner input
+        {
+            background: rgba(238,129,41,1.0);
+        }
+        .standardInner input,
+        .ultimateInner input
+        {
+            background: rgba(48,112,168,1.0);
+        }
+        /* clearfix class*/
+
+        .clear:before, .clear:after
+        {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+
+</head>
+<body>
+
+        <header class="clear">
+
+            <div class="companyName">
+                <p><span>Company</span> Name</p>
+            </div>
+
+            <nav id="topNav">
+                <ul class="navigation">
+                    <li><a href="#">home</a>
+                        <ul class="subMenuHome">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">about</a>
+                        <ul class="subMenuAbout">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">portfolio</a>
+                        <ul class="subMenuPortfolio">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">services</a>
+                        <ul class="subMenuServices">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">pricing</a>
+                        <ul class="subMenuPricing">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">contact</a>
+                        <ul class="subMenuContact">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <div id="pricing">
+
+            <h1>WE HAVE VERY FLEXIBLE OFFERS FOR YOU TO CHOOSE</h1>
+
+            <div class="standard">
+
+                <div class="standardOuter">
+                    <h2>BEST VALUE</h2>
+                </div>
+                <div class="standardInner">
+
+                    <h2>ICONIC GRAPHICS</h2>
+                    <p><span>$</span><span>10</span><span>Monthly</span></p>
+
+                    <ul class="pricingList">
+                        <li class="listitem">Ultimate Traffic</li>
+                        <li class="listitem">Ultimate Domain</li>
+                        <li class="listitem">Ultimate Databases</li>
+                        <li class="listitem">Unlimited e-Mails</li>
+                    </ul>
+
+                    <input type="button" class="enroll" value="ENROLL TODAY"/>
+                </div>
+                
+
+            <div class="bestValue">
+
+                <div class="bestValueOuter">
+                    <h2>BEST VALUE</h2>
+                </div>
+                <div class="bestValueInner">
+
+                    <h2>ICONIC GRAPHICS</h2>
+                    <p><span>$</span><span>25</span><span>Monthly</span></p>
+
+                    <ul class="pricingList">
+                        <li class="listitem">PHP, PERL, ASP, JSP</li>
+                        <li class="listitem">SEMI DEDICATED</li>
+                        <li class="listitem">Staging or Production</li>
+                        <li class="listitem">Unlimited e-Mails</li>
+                    </ul>
+
+                    <input type="button" class="enroll" value="ENROLL TODAY"/>
+
+                </div>
+
+            </div>
+
+                <div class="ultimate">
+
+                    <div class="ultimateOuter">
+                        <h2>BEST VALUE</h2>
+                    </div>
+                    <div class="ultimateInner">
+
+                        <h2>ICONIC GRAPHICS</h2>
+                        <p><span>$</span><span>35</span><span>Monthly</span></p>
+
+                        <ul class="pricingList">
+                            <li class="listitem">PHP, PERL, ASP, JSP</li>
+                            <li class="listitem">SEMI DEDICATED</li>
+                            <li class="listitem">Staging or Production</li>
+                            <li class="listitem">Unlimited e-Mails</li>
+                        </ul>
+
+                        <input type="button" class="enroll" value="ENROLL TODAY"/>
+
+                    </div>
+                </div>
+
+        </div>
+
+</body>
+</html>
